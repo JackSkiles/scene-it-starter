@@ -1,7 +1,7 @@
 
 const search = document.getElementById('search-form');
 const movieList = document.getElementById('movies-container');
-let haveWatched = [];
+
 let movieArray;
 
 
