@@ -21,3 +21,10 @@ body {
 	justify-content: space-between;
 	align-items: flex-end;
 }
+
+#movies-container2 {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	align-items: flex-end;
+}
