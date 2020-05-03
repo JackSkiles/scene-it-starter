@@ -1,21 +1,33 @@
 
 const list = document.getElementById('movies-container2');
-let movieArray;
+
 
 function removeFavorites(imdbID) {
-    let movie = movieArray.find(currentMovie => currentMovie.imdbID == imdbID); 
     let watchlistJSON = localStorage.getItem('watchlist');
-
+    
     let watchlist = JSON.parse(watchlistJSON);
+    
+    let movie = watchlist.find(currentMovie => currentMovie.imdbID == imdbID); 
+    // console.log(watchlist);
+    console.log(movie);
 
-    if (watchlist == null) {
-        watchlist = [];
-    }
-    watchlist.splice(imdbID, imdbID);
+    removeList = watchlist.filter(function (item, index){
+        if(index !== movie.imdbID) {
+            return item;
+        }
+    })
 
-    watchlistJSON = JSON.stringify(watchlist);
+    watchlistJSON = JSON.stringify(removeList);
+    localStorage.setItem('removeList', watchlistJSON);
+    console.log(removeList);
 
-    localStorage.setItem('watchlist', watchlistJSON);
+    // if (watchlist == null) {
+    //     watchlist = [];
+    // }
+    // console.log(watchlist);
+    // removeList = watchlist.filter(imdbID, movie);
+
+    // localStorage.setItem('watchlist', watchlistJSON);
 
 }
 
