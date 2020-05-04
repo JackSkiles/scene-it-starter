@@ -11,15 +11,18 @@ function removeFavorites(imdbID) {
     // console.log(watchlist);
     console.log(movie);
 
-    removeList = watchlist.filter(function (item, index){
-        if(index !== movie.imdbID) {
-            return item;
+    watchlist = watchlist.filter(function (item){
+        if(imdbID !== item.imdbID) {
+            return true;
+        }
+        else {
+            return false;
         }
     })
 
-    watchlistJSON = JSON.stringify(removeList);
-    localStorage.setItem('removeList', watchlistJSON);
-    console.log(removeList);
+    watchlistJSON = JSON.stringify(watchlist);
+    localStorage.setItem('watchlist', watchlistJSON);
+    console.log(watchlist);
 
     // if (watchlist == null) {
     //     watchlist = [];
