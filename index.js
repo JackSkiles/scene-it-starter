@@ -33,13 +33,11 @@ search.addEventListener('submit', function(e) {
         console.log(movieData);
         let movieHtmlArray = movieData.map(function (currentMovie) {
             return `
-            <div>
-                <img src="${currentMovie.Poster}">
-                    <div class="card-body">
-                        <h4 class="card-text mx-auto">${currentMovie.Title}</h4>
-                        <p>${currentMovie.Year}</p>
-                        <button class="add" id="add" onclick="saveToWatchList('${currentMovie.imdbID}')">Add To Favorites</button>
-                    </div>
+            <div class="card-body">
+                <img src="${currentMovie.Poster}" height="500px">
+                <h3 class="card-text mx-auto">${currentMovie.Title}</h3>
+                <p>${currentMovie.Year}</p>
+                <button type="button" class="btn btn-primary" id="pic" onclick="saveToWatchList('${currentMovie.imdbID}')">Add To Favorites</button>
             </div>`
         });
         movieList.innerHTML = movieHtmlArray.join('')

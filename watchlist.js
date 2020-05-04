@@ -39,13 +39,11 @@ document.addEventListener('DOMContentLoaded', function() {
     let favoritesList = JSON.parse(favoritesListJSON)
     let movieHtmlArray = favoritesList.map(function (currentMovie) {
         return `
-        <div>
+        <div class="card-body">
             <img src="${currentMovie.Poster}">
-                <div class="card-body">
-                    <h4 class="card-text mx-auto">${currentMovie.Title}</h4>
-                    <p>${currentMovie.Year}</p>
-                    <button class="add" id="add" onclick="removeFavorites('${currentMovie.imdbID}')">remove from favorites</button>
-                </div>
+            <h3 class="card-text mx-auto">${currentMovie.Title}</h3>
+            <p>${currentMovie.Year}</p>
+            <button type="button" class="btn btn-primary" id="pic" onclick="removeFavorites('${currentMovie.imdbID}')">remove from favorites</button>
         </div>`
     });
     movieArray = movieData;
