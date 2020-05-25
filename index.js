@@ -26,7 +26,7 @@ search.addEventListener('submit', function(e) {
     e.preventDefault();
     const searchString = document.querySelector('input').value;
     const urlEncodedSearchString = encodeURIComponent(searchString);
-    axios.get( "http://www.omdbapi.com/?apikey=b43843a0&s=" + urlEncodedSearchString)
+    axios.get( "https://www.omdbapi.com/?apikey=b43843a0&s=" + urlEncodedSearchString)
     .then(function (response) {
         let movieData = response.data.Search;
         console.log('movieData');
