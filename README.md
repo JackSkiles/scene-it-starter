@@ -10,4 +10,4 @@ to populate only certain elements onto the page, such as the movie poster and ti
 You can then add the movie to your local storage with the add favorites, then go to your favorites page where the movies will all load from
 local storage.
 
-![alt text](https://imgur.com/a/VuFE9j2)
+![alt text](https://imgur.com/a/to/VuFE9j2)
