@@ -18,3 +18,4 @@ You can then add the movie to your local storage with the add favorites, then go
 
 ![chrome_2020-06-17_21-43-02](https://user-images.githubusercontent.com/62663652/85204588-7cd6e580-b2e3-11ea-8575-ea1f0cca9059.png)
 
+After you go to your favorites list you can remove a movie or go mack to the home page. Enjoy searching for movies!
